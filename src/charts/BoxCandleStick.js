@@ -215,7 +215,7 @@ class BoxCandleStick extends Bar {
 
     let i = indexes.i
     let j = indexes.j
-    console.log(indexes);
+    alert(this.series[i][j]);
     let isPositive = true
     let colorPos = w.config.plotOptions.candlestick.colors.upward[indexes.realIndex]
     let colorNeg = w.config.plotOptions.candlestick.colors.downward[indexes.realIndex]
