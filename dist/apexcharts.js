@@ -28154,13 +28154,8 @@
         var i = indexes.i;
         var j = indexes.j;
         var isPositive = true;
-        try {
-          throw new Error(this.series);
-        } catch (error) {
-          console.error(error);
-        }
-        var colorPos = this.series[i][j].x > w.config.plotOptions.candlestick.colors.date[0] && this.series[i][j].x < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.upward[0] : w.config.plotOptions.candlestick.colors.upward[1];
-        var colorNeg = this.series[i][j].x > w.config.plotOptions.candlestick.colors.date[0] && this.series[i][j].x < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.downward[0] : w.config.plotOptions.candlestick.colors.downward[1];
+        var colorPos = w.globals.seriesXvalues[j] > w.config.plotOptions.candlestick.colors.date[0] && w.globals.seriesXvalues[j] < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.upward[0] : w.config.plotOptions.candlestick.colors.upward[1];
+        var colorNeg = w.globals.seriesXvalues[j] > w.config.plotOptions.candlestick.colors.date[0] && w.globals.seriesXvalues[j] < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.downward[0] : w.config.plotOptions.candlestick.colors.downward[1];
         var color = '';
         if (this.isBoxPlot) {
           color = [this.boxOptions.colors.lower, this.boxOptions.colors.upper];
