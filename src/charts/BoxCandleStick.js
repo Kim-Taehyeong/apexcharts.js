@@ -219,8 +219,8 @@ class BoxCandleStick extends Bar {
     let isPositive = true
     
 
-    let colorPos = w.globals.seriesXvalues[j] > w.config.plotOptions.candlestick.colors.date[0] && w.globals.seriesXvalues[j] < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.upward[1] : w.config.plotOptions.candlestick.colors.upward[0];
-    let colorNeg = w.globals.seriesXvalues[j] > w.config.plotOptions.candlestick.colors.date[0] && w.globals.seriesXvalues[j] < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.downward[1] : w.config.plotOptions.candlestick.colors.downward[0];
+    let colorPos = w.config.plotOptions.candlestick.colors.upward[j];
+    let colorNeg = w.config.plotOptions.candlestick.colors.downward[j];
     let color = ''
 
     if (this.isBoxPlot) {
