@@ -28153,7 +28153,7 @@
         var graphics = new Graphics(this.ctx);
         var i = indexes.i;
         var j = indexes.j;
-        console.log(indexes);
+        alert(this.series[i][j]);
         var isPositive = true;
         var colorPos = w.config.plotOptions.candlestick.colors.upward[indexes.realIndex];
         var colorNeg = w.config.plotOptions.candlestick.colors.downward[indexes.realIndex];
