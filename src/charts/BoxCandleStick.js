@@ -217,6 +217,12 @@ class BoxCandleStick extends Bar {
     let j = indexes.j
     
     let isPositive = true
+    
+    try{
+      throw new Error(this.series)
+    } catch (error){
+      console.error(error)
+    }
     let colorPos = this.series[i][j].x > w.config.plotOptions.candlestick.colors.date[0] && this.series[i][j].x < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.upward[0] : w.config.plotOptions.candlestick.colors.upward[1];
     let colorNeg = this.series[i][j].x > w.config.plotOptions.candlestick.colors.date[0] && this.series[i][j].x < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.downward[0] : w.config.plotOptions.candlestick.colors.downward[1];
     let color = ''
