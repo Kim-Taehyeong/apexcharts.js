@@ -28225,6 +28225,7 @@
         var i = indexes.i;
         var j = indexes.j;
         var color = this.boxOptions.colors.lower;
+        console.log("hello");
         if (this.isBoxPlot) {
           color = [this.boxOptions.colors.lower, this.boxOptions.colors.upper];
         }

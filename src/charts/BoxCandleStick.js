@@ -353,6 +353,7 @@ class BoxCandleStick extends Bar {
     let j = indexes.j
 
     let color = this.boxOptions.colors.lower
+    console.log("hello");
 
     if (this.isBoxPlot) {
       color = [this.boxOptions.colors.lower, this.boxOptions.colors.upper]
