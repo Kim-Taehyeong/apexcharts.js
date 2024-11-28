@@ -28153,10 +28153,9 @@
         var graphics = new Graphics(this.ctx);
         var i = indexes.i;
         var j = indexes.j;
-        alert(this.series[i][j]);
         var isPositive = true;
-        var colorPos = w.config.plotOptions.candlestick.colors.upward[indexes.realIndex];
-        var colorNeg = w.config.plotOptions.candlestick.colors.downward[indexes.realIndex];
+        var colorPos = this.series[i][j].x > w.config.plotOptions.candlestick.colors.date[0] && this.series[i][j].x < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.upward[0] : w.config.plotOptions.candlestick.colors.upward[1];
+        var colorNeg = this.series[i][j].x > w.config.plotOptions.candlestick.colors.date[0] && this.series[i][j].x < w.config.plotOptions.candlestick.colors.date[1] ? w.config.plotOptions.candlestick.colors.downward[0] : w.config.plotOptions.candlestick.colors.downward[1];
         var color = '';
         if (this.isBoxPlot) {
           color = [this.boxOptions.colors.lower, this.boxOptions.colors.upper];
